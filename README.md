@@ -1,4 +1,4 @@
-<div>
+<div style="color:white">
 <style>
 .title{
     color: #00BCD4;
