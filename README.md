@@ -1,3 +1,4 @@
+<div>
 <style>
 .title{
     color: #00BCD4;
@@ -9,6 +10,7 @@
     margin:auto;
 }
 </style>
+</div>
 
 
 # <p class="title">👨‍💻 Frontend Developer 👨‍💻</p> 
