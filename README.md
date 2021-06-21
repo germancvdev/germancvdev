@@ -1,4 +1,4 @@
-<div style="color:white">
+<div style="opacity:0">
 <style>
 .title{
     color: #00BCD4;
