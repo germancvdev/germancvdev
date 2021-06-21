@@ -1,21 +1,11 @@
-<div style="opacity:0">
-<style>
-.title{
-    color: #00BCD4;
-    text-align: center;
-}
 
-.content{
-    max-width:560px;
-    margin:auto;
-}
 </style>
 </div>
 
 
-# <p class="title">👨‍💻 Frontend Developer 👨‍💻</p> 
+# <p style="color: #00BCD4; text-align: center">👨‍💻 Frontend Developer 👨‍💻</p> 
 
-<div class="content">
+<div style="max-width:560px;margin:auto;">
 
 I have more than 3 years of experience working on different projects with VueJS and NuxtJS and its modules as Auth, Axios, PWA, Nuxt-i18n, Nuxt-fire, Nuxt-content, etc. Also worked with different UI libraries such as: Vuesax, Vuetify, Buefy, Bootstrap, Tailwindcss, etc.
 
