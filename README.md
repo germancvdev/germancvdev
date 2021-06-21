@@ -1,3 +1,16 @@
+<style>
+.title{
+    color: #00BCD4;
+    text-align: center;
+}
+
+.content{
+    max-width:560px;
+    margin:auto;
+}
+</style>
+
+
 # <p class="title">👨‍💻 Frontend Developer 👨‍💻</p> 
 
 <div class="content">
@@ -49,16 +62,3 @@ export default {
 
 </div>
 
-<style>
-.title{
-
-
-    color: #00BCD4;
-    text-align: center;
-}
-
-.content{
-    max-width:560px;
-    margin:auto;
-}
-</style>
