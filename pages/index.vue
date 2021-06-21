@@ -6,6 +6,7 @@
         <span class="plus">+</span>
         <VuesaxLogo />
       </header>
+
       <h1 class="title">Nuxt.js + Vuesax</h1>
       <h2 class="subtitle">
         <a href="https://vuesax.com/">Vuesax</a> is a framework of ui components
