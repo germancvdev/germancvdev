@@ -1,55 +1,86 @@
 <template>
-  <div>
+  <div class="main">
+    <div class="menu">
+      <div>
+        <div v-for="(item, index) in menuItems" :key="index" :class="item.id">
+          <vs-button
+            class="s-mb-2 item"
+            icon
+            circle
+            primary
+            :flat="$route.path !== item.path"
+            :active="$route.path === item.path"
+            :to="item.path"
+          >
+            <i :class="item.icon"></i>
+
+            <template #animate>
+              <i :class="item.icon"></i>
+
+              <span class="s-pl-1 menuHover">
+                {{ item.name }}
+              </span>
+            </template>
+          </vs-button>
+        </div>
+      </div>
+    </div>
     <Nuxt />
   </div>
 </template>
-
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+import { mapState } from 'vuex'
+export default {
+  data: () => ({
+    activePath: null,
+    hover: false,
+  }),
+  computed: {
+    ...mapState(['menuItems']),
+  },
 }
+</script>
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+<style scoped lang="scss">
+.main {
+  background: #eee;
+  width: 100vw;
+  position: relative;
+  .menu {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+    .item {
+      margin-left: auto;
+    }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5 {
+      .menuHover {
+        display: none;
+      }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+      &:hover {
+        .item {
+          min-width: 100px;
+          color: #fff;
+          background: rgba(var(--vs-primary), 1);
+        }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+        .menuHover {
+          display: block;
+        }
+      }
+    }
+  }
 }
 </style>

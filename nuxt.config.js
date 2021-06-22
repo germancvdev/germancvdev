@@ -1,7 +1,4 @@
 export default {
-
-
-
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -16,13 +13,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['vuesax/dist/vuesax.css'],
+  css: ['vuesax/dist/vuesax.css', '@/assets/base.css', '@/assets/base.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/vuesax'],
+  plugins: [{ src: '@/plugins/vuesax', mode: 'client' }, '@/plugins/ed-grid'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
