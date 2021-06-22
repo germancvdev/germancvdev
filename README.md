@@ -1,4 +1,4 @@
-# <p style="color: #00BCD4; text-align: center">👨‍💻 Frontend Developer 👨‍💻</p> 
+# <p style="color: #00BCD4; text-align: center">Frontend Developer</p> 
 
 <div style="max-width:560px;margin:auto;">
 
